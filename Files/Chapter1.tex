@@ -1,0 +1,32 @@
+\section{Introduction}
+\label{sec:introduction}
+\subsection{Background}
+
+Fluid flow is measured using a variety of meters, including the turbine-type flow meter, the rotameter, the orifice meter, and the venturi meter \cite{pereira2009flow}. Each meter works by altering a physical property of the flowing fluid and then measuring that change. The flow is then related to the measured change \cite{miller1983flow}.
+\par
+The Fluids Hydraulic Test Rig consists of the orifice and the venturi. These flow meters operate by Bernoulli’s theorem, that an increase in the speed of a fluid occurs simultaneously with a decrease in static pressure \cite{pockman1940bernoulli}. This machine is used to conduct an experiment to establish a relationship between discharge, the difference in pressure, and the coefficient of discharge of these two flow meters. 
+During the experiment, the lift pump is turned on, the discharge valve is fully opened to establish a steady flow. This is achieved when the manometric readings are steady. This is also done to remove any air bubbles that might be trapped in the pipeline. The discharge valve is then closed. The valve is then opened in small ratios depending on the number of steps required. For each step, the discharge is collected, and its temperature is measured within a specific time interval. Finally, the weight of the collected discharge is measured.
+
+\subsection{Problem statement}
+
+In the experiment to determine the coefficient of discharge, one has to be able to synchronize time and temperature measurements with discharge collection in order to obtain values within the tolerable range. This is not the case with the Fluids Hydraulic Test Rig currently used in JKUAT for fluid flow measurement since it is wholly mechanical and synchronization cannot be achieved by a human. The flow rate is controlled by a gate valve in small steps which is determined by human intuition and can be inconsistent. With these inconsistencies, the results can often be outside the tolerable range. An automated Fluids Hydraulic Test Rig can be able to control the flow rate in precise steps, and also synchronize the time and temperature measurement with discharge collection while maintaining the credibility of the experiment. This can minimize human error due to human lag.  
+
+
+\subsection{Objectives}
+\subsubsection{Main objective}
+
+The main objective of this project is to automate the discharge collection process through synchronization of time and temperature measurements.
+
+\subsubsection{Specific objectives}
+
+\begin{enumerate}
+	\item To design an automated flow control valve unit that can precisely discharge in steps.
+	\item To design and fabricate a discharge collection unit with automated weight, time and temperature measurements.
+    \item To design a user interface and the control algorithm.
+
+\end{enumerate}
+
+
+\subsection{Justification of the study}
+
+This project aims to automate the discharge collection process of a Fluids Hydraulic Test Rig, robust enough to minimize human error due to human lag while maintaining the credibility of the experiment. The system will be modular enough that it can be integrated to the existing machine with no major modifications.

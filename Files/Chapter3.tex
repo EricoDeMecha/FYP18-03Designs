@@ -1,0 +1,93 @@
+\section{Methodology}
+\subsection{Overview}
+This automation will entail three main subsystems namely: mechanical, electrical, and control modules. To effectively ensure consistency in this experiment, it will be imperative that the following are taken into consideration: synchronism in time and temperature measurement with discharge collection, and precision in controlling the flow rate in steps.
+
+\subsection{Mechanical Module}
+
+\subsubsection{Flow Control Valve}
+
+This is located at the discharge collection end of the machine. It is required that this valve has an adjustable aperture for one to be able to control the flow of the fluid in steps. The torque requirement for turning the valve should also be considered for sizing the motor for turning the valve. Once an experiment starts, this valve is to be left flowing after each step until the last step then it closes. Subsequent steps are incremental to the first step.
+
+\subsubsection{Discharge collection unit}
+
+This sub-unit will be used to collect the discharge from the valve within the time interval set. This unit can be slid in and out below the discharge valve to collect the discharge within the set time interval. It can also be fixed below the discharge valve with a lid to open when the timer starts to collect the discharge and close when the timer stops. Both approaches should be highly responsive to ensure only the quantity of the fluid flowing within the time interval is collected and not a drop more. 
+
+\begin{enumerate}
+    \item \textbf{Mini Collection tank} \newline
+    The discharge collection unit will also have a mini collection tank. Within this tank, the weight of the collected discharge is measured and its temperature recorded. This tank should be resistant to sudden environmental changes. It should also be light enough in case the discharge collection approach of sliding the tank in and out below the discharge flow is considered.  
+    \item \textbf{Outlet valve} \newline 
+    The collected discharge is to be emptied before the next step of discharge is initiated. This is to be done through an outlet valve that opens to the reservoir. This valve should be large enough to be able to empty the collection tank within the shortest time possible. The location of this valve is also an important factor to be considered to reduce the time for emptying the discharge. 
+\end{enumerate}
+
+
+\subsection{Electrical and Electronic Module}
+The electrical module will comprise a motor, limit switch, valves, an immersible temperature probe, weight measurement unit, and a power source as the main components.
+
+\subsubsection{Motor}
+The motor is the main actuation unit in this setup. They will be used in the following sections
+\begin{enumerate}
+    \item \textbf{Flow  rate control} \newline
+    The motor in this section will be used for flow rate control from the orifice and the venturi flow meters into the mini collection tank. This motor will be required to open a valve attached to the discharge collection unit in small and precise steps computed from the size of the pipe and the number of steps required by the user. The choice of the motor in this section will depend on the following factors.
+    \begin{enumerate}
+        \item \textbf{Precision}  \newline
+        The flow rate is controlled in small precise steps. This requires a motor that can produce the steps with a very small tolerance.
+        \item \textbf{Torque requirement} \newline
+        This will be determined by the flow rate control valve operated by the motor. The amount of torque required to turn the valve handle will be considered for sizing the motor.
+        \item \textbf{Control}  \newline
+        The directions that the motor can cover will be considered. The flow control valve requires a motor that can open and close it therefore a motor that can rotate both clockwise and anticlockwise will be considered.
+    \end{enumerate}
+    \item \textbf{Discharge collection channel Operation}  \newline
+    This sub-unit uses a pipe to cut the flow into the discharge collection tank. The motor in this section will be used for sliding the pipe in and out below the flow control valve to collect the discharge at specified time intervals. The choice of the motor in this section will depend on the following factors
+    \begin{enumerate}
+        \item \textbf{Speed} \newline
+        In order to boost precision in this experiment, the pipe has to be slid into and out of the flow fast enough to ensure only the correct amount of the fluid is collected. This requires a motor with relatively higher speeds.
+        \item \textbf{Direction} \newline
+        The pipe is slid into and out of the flow. This operation can only be achieved by a motor that can rotate in both directions.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Limit Switch}
+The pipe will be moved by a motor that can move back and forth. To ensure that the discharge collection pipe is at the right position, limit switches will be used to detect the pipe and act as a feedback control to operate the motor. The location of the limit switches will be considered to ensure precision.
+
+\subsubsection{Immersible temperature probe}
+An immersible temperature probe will be attached to the mini collection tank for measuring the temperature of the collected discharge within the set time interval. This information is then sent to the user interface after each step in the experiment. The location of the temperature probe within the tank is to be considered to ensure reliable measurement. It is expected that it should be submerged. 
+
+\subsubsection{Weight measurement unit}
+
+Two approaches for weight measurement are to be considered. One approach will involve the use of ultrasonic waves to determine the depth of the empty tank. The depth of the fluid, its density, and the known surface area of the tank will be used to calculate the weight of the fluid. Another approach will involve the use of load cells strategically distributed below the collection tank to measure the weight of the tank at all times. The choice between the two approaches will be made considering the reliability and the precision of the measurement.
+
+\subsubsection{Power Source}
+Most of the units in this prototype will be operating on DC power. An AC-DC converter can be used to provide up to a 24V main DC source. Buck converters can be used to step down this value to a value specific to each unit.
+
+\subsection{Control Module}
+\subsubsection{Processing Unit}
+This unit is responsible for executing the application logic, sending instructions to the actuators, and reading inputs from sensors in the system. A microcontroller or just a microprocessor can be used. A fully developed computer board such as Raspberry Pi or an M7 series \ac{STM}32 microcontroller can also be used. The choice of a microcontroller, a microprocessor, or a computer chip will be determined by the following factors. 
+\begin{enumerate}
+    \item \textbf{\ac{GPIO}s} \newline
+    These form the primary interface between a microcontroller or a microprocessor with external circuitry. They can be used for several purposes such as analog signal I/O, counter/timer, digital signal I/O, and serial communication. A group of these pins forms a port. The number of pins and hence the size of the port are two important factors that are to be considered in the choice of a microcontroller or a microprocessor. 
+    \par
+    Some devices such as LCD displays with touch capability require bigger ports as many devices require many GPIOs to control them. 
+    \item \textbf{Processing Power}  \newline
+    This refers to the processing capacity of a microcontroller. A multicore processor is faster and consumes more power as compared to a single-core processor. A multicore processor can also render intense graphics on displays. The amount of input processing will guide one in choosing the best microcontroller or microprocessor for the task.
+\end{enumerate}
+\subsubsection{Interface}
+This provides a means of interaction with the machine. It can allow one to enter required experiment parameters, start and stop or reset the experiment, and read the processed results. Some of the interfaces that will be considered in this project are:
+\begin{enumerate}
+    \item \textbf{LCD with Keypad} \newline
+    One can navigate, read and provide input where it is required on the LCD display using the keypad. 
+    \item \textbf{LCD with touch capability} \newline
+    One can navigate the interface easily by touching and using a virtual keyboard to provide input.
+    \item \textbf{LCD with Knobs} \newline
+    The interface will be entirely controlled by knobs, navigation from page to page, and parameter input.
+\end{enumerate}
+
+The choice of one of the three means to interface with the machine will entirely depend on the following factors.
+
+\begin{enumerate}
+    \item \textbf{Aesthetics} \newline
+    This refers to the perception of the user while operating the interface. A touch screen is minimalistic, and its aesthetics can be improved easily by adding relatively beautiful graphics in the software. This might not be the case with the case of LCD with knobs. Any attempts to improve its aesthetics might require the addition of knobs. This might clutter the interface.
+    \item \textbf{Ergonomics} \newline
+    This refers to the impact of the interface on the user, and the ease of operation. LCD display with a keypad interface can be operated even in a moist environment. This might not be the case with an LCD display with touch capability.    
+    \item \textbf{Size}  \newline
+    This refers to the size of the display with regard to the size of the contents to be displayed. Fewer contents can fit any of the mentioned displays but the operability of the contents in the display should be considered. 
+\end{enumerate}
