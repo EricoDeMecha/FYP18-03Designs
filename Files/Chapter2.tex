@@ -137,17 +137,32 @@ Angelo et al \cite{odetti2019design} implemented this technique in the design an
 When the coil in the solenoid is crossed by a current a strong magnetic field is generated that attracts the ferromagnetic plunger connected to the sealing stopper and opens the bottle allowing water to flow into the bottle's neck. As the current stops the two permanent magnets attract each other and the stopper seals the bottle \cite{odetti2019design}.
 
 \subsubsection{Pneumatic Control}
+Pneumatic actuators utilizes the power of compressed air to impart motion on objects. Sangmin, and Joonwon \cite{lee2009development} did a design of cartridge-type pneumatic dispenser with a back flow stopper. The system used a membrane covering a discharge hole. The membrane was opened and closed using negative and positive pneumatic pressure respectively as shown in figure \ref{fig:dispensing_mechanisml}. 
 
+\begin{figure}
+    \centering
+    \includegraphics{Figures/dispensing_mechanism.png}
+    \caption{Dispensing mechanism \cite{lee2009development}}
+    \label{fig:dispensing_mechanisml}
+\end{figure}
 
+The application was able to do precise dispensation of 100nL to 400nL droplets.
 
 \subsection{Summary}
 
 Every fluid flow experiment done on the Synthetic Hydro-Experimental machine involves the collection of discharge and the measurement of its properties. The most common experiment is the determination of the coefficient of discharge  of the Venturi and the Orifice. In this literature, other techniques such as CFD and analytical methods have been found to be effective as alternatives to this machine. These techniques have been proven to produce results with a difference of less than $1\%$  from the experimental results obtained from a physical setup. Such results can also be obtained from the fluids rig currently used in JKUAT by automating the discharge collection unit. With regard to this, the literature has also covered discharge collection techniques that have proven to be effective in other applications and can be adapted for this automation. This techniques include the application of pneumatics and electromagnetism. 
 
-\subsection{Gap Analysis}
-
+\subsection{Gap analysis}
 \begin{enumerate}
-    \item 
+    \item The use of the CFD method or the analytical method  undermines the credibility of the fluid flow experiments. This two techniques are rather used for the design of fluid flow measuring devices.
+    \item CFD method can also be very resource intensive in terms of compute resources. Softwares used for this method requires a hefty license fee.
+    \item The application of the analytical method involves tedious calculations and several assumptions which can produce untrustworthy results.
+    \item The use of the Synthetic Hydro-Experimental machine with a manual discharge collection unit often produce results with huge error margins.  
 \end{enumerate}
+
+This project proposal will be entirely focused on addressing gap number four with the application of techniques such as pneumatics or electromagnetism. This will close in the technological gap with the use of CFD, and simplify the use of analytical methods by providing data for the computation of fluid flow properties.    
+
+
+
 
 
