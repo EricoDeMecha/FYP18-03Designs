@@ -117,31 +117,26 @@
     ------------------------------------------------------------------------------------------------\\[1.5cm]
   \end{center}
 \end{titlepage}
-%
-%\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+
 
 \input{Files/Declaration}
 \clearpage
+\addcontentsline{toc}{section}{Abstract}
+\input{Files/Abstract}
+\clearpage
+\addcontentsline{toc}{section}{Table of Contents}
 \tableofcontents
 \clearpage
-% \addcontentsline{toc}{section}{Table of Contents}
 \addcontentsline{toc}{section}{List of Figures}
-%{%
 \let\oldnumberline\numberline%
 \renewcommand{\numberline}{\figurename~\oldnumberline}%
 \listoffigures
 \clearpage
 \addcontentsline{toc}{section}{List of Tables}
 \listoftables
-\newpage
 \clearpage
 \addcontentsline{toc}{section}{List of Abbreviations}
 \input{Files/ListofAbbreviations.tex}
-\clearpage
-\newpage
-
-\addcontentsline{toc}{section}{Abstract}
-\input{Files/Abstract}
 \clearpage
 \pagenumbering{arabic}
   \input{Files/Chapter1}
