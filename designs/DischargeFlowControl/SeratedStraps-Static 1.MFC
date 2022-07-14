@@ -1,0 +1,16 @@
+[StartTime]
+SeratedStraps-Static 1.MFC=3s
+[SolverState]
+SeratedStraps-Static 1.MFC=2
+[MainFrame]
+SeratedStraps-Static 1.MFC=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPGFAAAAAACKOPPPPPOLBAAAAAFHPPPPPP
+[ShowMin]
+SeratedStraps-Static 1.MFC=No
+[SolverType]
+SeratedStraps-Static 1.MFC=Linear Analysis
+[StudyType]
+SeratedStraps-Static 1.MFC=0
+[StudyName]
+SeratedStraps-Static 1.MFC=Static 1
+[Solver]
+SeratedStraps-Static 1.MFC=Sparse
