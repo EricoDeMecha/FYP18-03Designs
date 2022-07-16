@@ -5,3 +5,5 @@
 *.out
 *.synctex.gz
 *.toc
+*.CW2
+*-STATIC*
