@@ -2,55 +2,79 @@
 \subsection{Overview}
 This project consists of three main units: a discharge flow control unit, a discharge collection  unit, and a main control unit. 
 \subsection{Discharge flow control unit}
-This unit will be used for controlling the flow at the end of the pipe system. It will utilize a ball valve installed on the existing machine. It is required that the valve aperture is controlled in steps specified by the user. However, the ball valve will be controlled by a driver based on a micro-controller. Some of the actuation mechanisms that can be applied for this purpose include :
-
-\subsubsection{Stepper linear actuator}
-
-A stepper motor converts a full rotation to small equal steps. The step size vary from one motor to the other.It will be used in this case to drive the handle of the ball valve. A mechanical interface such as a level system will be used between the motor and handle.
-
-\subsubsection{Piezoelectric Actuator}
-
-A Piezoelectric actuator converts electrical energy to mechanical displacement. It can provide high precision displacements with a large output force. It will be mounted between the handle lever and a stationary surface. When energised, the actuator will displace the lever and hence turning the valve. It is responsive to small variation in voltage.
-
 \par
+The unit is used for controlling the flow rate at the end of the pipe system ideally by allowing a regulated amount of water into the collection tank. To ensure little modification to the current state-of-the-art machine, the flow control unit utilizes the existing ball valve to achieve this operation. Furthermore, to attain the regulated flow, the valve aperture opens and closes in small and precise steps as specified by the user. Therefore, to achieve this, the servo motor, hosted on a motor cage and clamped to the valve, is coupled to the ball valve with help of an interface and controlled by a driver based on the STM32F40VET6 microcontroller.  
+\subsection{Design Consideration}
+Precision in the opening and closing of the ball valve is key to ensuring that only the required amount of water is collected within the stipulated time. Servo and stepper motors were considered to achieve this operation.
+\subsubsection{Stepper Motor}
+\par
+The motor operates by accurately synchronizing position with the pulse signal output from the controller to the driver, achieving highly accurate positioning and speed control. Stepper motors feature high torque and low vibration at low speeds ideally below 1500rpm, ideal for applications requiring quick positioning in a short distance. Furthermore, stepper motor rotates with a fixed step angle typically 1.8 degrees for a 2-phase. However, to achieve this requires the use of a micro-step driver.
+\par
+Besides, while having full control of rotation and speed, the simple structure of stepper motors is achieved without using electrical components, such as an encoder within the motor. For this reason, stepper motors are very robust and have high reliability with very few failures. As for stopping accuracy, ±0.05° (without cumulative pitch errors) is very accurate. Because the positioning of stepper motors is performed by open-loop control and operated by the magnetized stator and magnetic rotor with small teeth, stepper motors have a higher follow-up mechanism toward commands than that servo motors. Also, no hunting occurs when stopping stepper motors. 
+\subsubsection{Servo Motor}
+\par
+Servo motors run significantly faster than stepper motors, with speeds greater than 1500rpm. This enables servo motors to be used with gearboxes to deliver much higher torque at useful speeds. They also deliver more consistent torque across the speed range of the motor. Unlike stepper motors, they do not have holding torque per se. Closed-loop operation enables the controller/drive to command that the load remain at a specific position, however, and the motor will make continual adjustments to hold it there. Thus, servo motors can deliver de facto holding torque. The Servo motor rotates with a fixed step angle as low as 1 degree with or without the use of a driver. Furthermore, when powered, servo motors tend to move their shaft position to the zero position, a phenomenon referred to as hunting.
+\subsection{Justification}
+\par
+Servo motor is used in the discharge flow control unit because of the small step angle (1 degree) that it can turn as compared to a stepper with a typical step angle of 1.8 degrees. The smaller the angle, the more the number of steps hence the experiment could be conducted as many times as possible for higher accuracy. Furthermore, the fact that servo motors do not necessarily need a micro-step driver for their operation reduces the overall cost.
+\subsection{Flow Control Unit Designs}
+\begin{figure}[ht]
+\includegraphics[width=0.9\linewidth]{Figures/Image3.jpeg}
+\centering
+\caption{Top View }
+\label{fig:Image3}
+\end{figure}
 
-The choice between these mechanisms will depend on the following factors :
-\begin{enumerate}
-    \item Torque requirements  of the ball valve. 
-    \par The piezoelectric actuator is suited for higher torque requirements as compared to the stepper motor. 
-    \item Step sizes
-    \par Stepper motors are restricted to step sizes above their step angle which is typically 0.9 $^{\circ}$. Piezoelectric actuators have a positioning accuracy of 0.3 mm.
-\end{enumerate}
+\begin{figure}[ht]
+\includegraphics[width=0.9\linewidth]{Figures/Image1.png}
+\centering
+\caption{Top View }
+\label{fig:Image1}
+\end{figure}
 
 \subsection{Discharge collection unit}
-This unit will form the core part in the automation of the discharge collection. It will consists of the following : a flow diversion sub-unit, a discharge collection tank, an outlet valve, weight and temperature measurement sub-units. 
- 
+It is the core part of the experiment. The discharge collection unit comprises the flow diversion sub-unit, a discharge collection tank, an outlet valve, and weight and temperature measurements sub-units.
 \subsubsection{Flow diversion sub-unit}
-This unit will be responsible for diverting the flow of the discharge from the main pipe system to the discharge collection tank. It will be required to have a fast response time of about a few milliseconds. It is also expected to divert the flow with minimum splashes and leakages into the discharge collection tank. This unit will consist of a flap, and an actuation unit. The design of the flap will be based on the following factors :
-\begin{enumerate}
-    \item Size \newline
-    The size of the flap should be considered such that it will be able to fully cover the inlet of the discharge collection pipe. 
-    \item Shape \newline
-    The shape of the flap should be such that it can divert the discharge away from the discharge collection unit with minimum spillage into the collection pipe. A funnel-shaped flap will be considered for this case.
-    \item Material \newline
-    The flap will always be in contact with the discharge fluid. This necessitates the flap to be a resistant to rust. The flap will also be actuated by a driver, and in order to achieve a fast response, the material of flap should be light.
-\end{enumerate}
 \par
-The following mechanisms will be considered for the actuation of the flap :
-\begin{enumerate}
-    \item Electromagnets \newline
-    This mechanism generates a magnetic effect on application of voltage. This will attract the metallic flap and hence opening the discharge collection pipe. The flap will be returned by a spring system in order to close the pipe.
-    \item Motors \newline
-    This mechanism will operate by driving the lid back and forth through an interface. The interface between the lid and the motor can be either a screw or a nut and a bolt. As the motor rotates, it either screws in or out the screw or the bolt and hence opening or closing the pipe.
-\end{enumerate}
+The sub-unit is responsible for diverting the discharge from the main pipe system to either the collection tank or into the main reservoir. The weight of the collected discharge is critical to the whole process. Therefore, to ensure that only the required amount of water is collected, the diversion unit ensures that there are minimal splashes and leakages by use of a curved flap. Furthermore, the fast response of the unit is attained by the use of an electromagnet whose linear motion is amplified by the use of a lever system hence providing the flap with a wider angle.
+\subsection{Design Consideration}
+The sub-unit is to have a faster response and large linear displacement capabilities Piezoelectric actuators and electromagnets were considered for this application.
+\subsubsection{Piezoelectric Actuators}
 \par
-The choice between this two type of methods will depend on the following factors :
-\begin{enumerate}
-    \item Force requirements \newline
-    This refers to the force required to maintain the flap and hence the pipe open or closed. This will be affected by the stream of the discharge landing on the flap. Electromagnets can be adapted to produce more force by increasing the supply voltage. However, the motor will have to be replaced by another motor with more torque.
-    \item Voltage requirements \newline
-    Electromagnets tend to require higher voltages to produce the same force as a motor.
-\end{enumerate}
+Piezoelectric actuators are transducers that convert electrical energy into a mechanical displacement or stress based on a piezoelectric effect, or vice versa. They are used widely as a high precision positioning mechanism since they can control a small mechanical displacement at high speed, with the advantages of large generated force, stable displacement, and ease of use. However, problems include insufficient displacement and the large voltage up to a few hundred volts, which is needed.
+\subsubsection{Electromagnets}
+\par
+Electromagnetic devices leverage the unique ability of magnetic metals such as iron to generate a magnetic field when electric current is applied. One of the biggest advantages offered by electromagnetic devices is durability. Unlike piezoelectric devices, which have the potential for shattered crystals, or electrostatic solutions with their required precise measurements, electromagnetic offerings can withstand high-volume, high-intensity use without suffering output or capacity loss. This makes them ideal for applications in which on-demand power and magnetism are required. Furthermore, as compared to piezoelectric actuators, electromagnets have a faster response and larger displacements which is actually ideal for our application.
+\subsection{Justification}
+\par
+Electromagnets is used as the main actuation mechanism for the flow diversion sub unit due to its faster response when energized as compared to piezoelectric actuators. Furthermore, piezoelectric actuators produce very small mechanical linear displacements as compared to electromagnets.
+\subsection{Flow Diversion Sub-Unit Designs}
+
+\begin{figure}[ht]
+\includegraphics[width=0.9\linewidth]{Figures/DiversionUnit_front.png}
+\centering
+\caption{Diversion Unit front View }
+\label{fig:DiversionUnit_front.}
+\end{figure}
+
+
+\begin{figure}[ht]
+\includegraphics[width=0.9\linewidth]{Figures/DiversionUnit_side.png}
+\centering
+\caption{Diversion Unit side View }
+\label{fig:Diversion Unit_side}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=0.9\linewidth]{Figures/DiversionUnit_isometric.png}
+\centering
+\caption{Diversion Unit isometric View }
+\label{fig:Diversion Unit isometric}
+\end{figure}
+
+
+
+
 \subsubsection{Discharge collection tank}
 This unit will be used to collect the discharge temporarily at each step during the experiment. The weight and temperature of the discharge will be measured within the tank. The design of the tank will involve the consideration of the following factors :
 \begin{enumerate}
