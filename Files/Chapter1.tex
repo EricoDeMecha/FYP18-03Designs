@@ -1,20 +1,19 @@
 \section{Introduction}
 \label{sec:introduction}
 \subsection{Background}
-Fluid flow measurement involves the measurement of the properties of a smooth and uninterrupted stream of flowing particles that conform to a pipe. These flow properties include the coefficient of discharge, mass flow rate, fluid velocity, differential pressure, and conductivity coefficients. They are altered and measured by flow measuring devices such as the Venturi, the Orifice, turbine flow meters and rotameters \cite{nandagopal2022fluid}. These measurements are finally related to the flow using the Bernoulli's equation. 
+Fluid flow measurement involves the measurement of the properties of a smooth and uninterrupted stream of flowing particles that conform to a pipe. These flow properties include the coefficient of discharge, mass flow rate, fluid velocity, differential pressure, and conductivity coefficients \cite{pereira2009flow}. They are altered and measured by flow measuring devices such as the Venturi, the Orifice, turbine flow meters and rotameters \cite{nandagopal2022fluid}. These measurements are finally related to the flow using the Bernoulli's equation. 
 
 \par
 The Synthetic Hydro-Experimental machine, currently installed in JKUAT, is a configurable machine with these flow meters. This machine is used to conduct experiments to establish relationships between the fluid flow properties and the behavior of the flow. It has a lift pump, gate valves, alcohol manometers, pressure gauges, a Pelton turbine, a Venturi, an orifice, and water reservoirs.  During experiments, the lift pump is turned on, and the discharge valve is fully opened to establish a steady flow.  The discharge valve is then closed. The valve is opened in small steps depending on the number of steps required. For each step, the discharge is collected, and its temperature is measured within a specific time interval. Finally, the weight of the collected discharge is also measured.
 
 \subsection{Problem statement}
 
-In fluid flow experiments involving the Venturi, and the orifice, the discharge steps are to be precisely opened, and the time and temperature measurements are taken simultaneously with discharge collection in order to obtain values that are within a tolerable range. This is not the case with the Synthetic Hydro-Experimental machine currently used in JKUAT since it is wholly mechanical and some of the simultaneous measurements cannot be simply achieved by a human. The flow rate is controlled by a gate valve in small steps determined by human intuition which can be inconsistent. With these inconsistencies, the results can often be outside the tolerable range. Automating the discharge collection process can minimize the error in the results and still preserve the credibility of the experiment. 
-
+In fluid flow experiments utilizing the Venturi and the orifice to establish the coefficient of discharge, the discharge steps must be precisely opened, and time and temperature measurements must be made concurrently with discharge collection so as to achieve values that are within a reasonable range.The Synthetic Hydro-Experimental machine now in use at JKUAT to establish this relationship, however, is entirely mechanical, making it impossible for a human to do some of the simultaneous measurements. A ball valve regulates the flow rate in small intervals using human intuition, which can be imprecise. As a result, with these discrepancies, the findings might frequently be outside of the acceptable range. Automating the discharge collection process can minimize the error in the results and still preserve the credibility of the experiment.
 
 \subsection{Objectives}
 \subsubsection{Main objective}
 
-The main objective of this project is to automate the discharge collection process for the Synthetic Hydro-Experimental machine. 
+ To automate the discharge collection process for the Synthetic Hydro-Experimental machine. 
 
 \subsubsection{Specific objectives}
 
@@ -30,21 +29,20 @@ The following are what are expected of the specific objectives mentioned
 
 \begin{enumerate}
     \item \textbf{Discharge flow control unit}\\
-    A discharge flow control control mechanism that can turn the ball valve in precise steps is expected. The steps obtained from the division of the circumference of a full turn by the number of steps are also expected to be precise to the nearest whole number.
+    A discharge flow control mechanism that can turn the ball valve in precise steps. The steps obtained from the division of the circumference of a full turn by the number of steps should be precise to the nearest whole number.
     \item \textbf{Discharge collection unit}\\
-    A discharge collection unit that can precisely collect the discharge within the specified time interval while taking its temperature and weight is expected. This can be expected if the expectations of the following sub-units are met :
+    A discharge collection unit that can precisely collect the discharge within the specified time interval while taking its temperature and weight simultaneously. This can be expected if the expectations of the following sub-units are met :
     \begin{enumerate}
         \item \textbf{Flow diversion sub-unit}\\
-        A precisely sized diversion sub-unit, correctly positioned to collect the whole stream is expected. This will improve on the accuracy of the weight of the discharge and hence that of the experiment.
+        A precisely sized diversion sub-unit, correctly positioned to collect or divert the discharge with minimal splashes the whole stream. This will improve on the accuracy of the weight of the discharge and hence that of the whole experiment experiment in general.
         \item \textbf{Discharge collection tank}\\
-        A discharge collection tank whose shape can allow for accurate weight measurement is expected. It is also expected that this tank is positioned in such a way that flow into this tank utilizes gravity to eliminate the need for an extra pump.
+        A discharge collection tank whose shape can allow for accurate weight measurement. The collection tank should allow for motivated discharge into the reservoir and it should also be positioned in such a way that flow into this tank utilizes gravity to eliminate the need for an extra pump.
         \item \textbf{Discharge weight and temperature measurements}\\
         It is expected these units measuring devices can measure to the smallest resolution.
     \end{enumerate}
     \item \textbf{Control and Display}\\
-    It is expected that the control module can handle intense computations such as error approximation, immediate rendering of results and communicating with the sensors and transducers that will be used in the system. It is also expected that the user interface is slick and ergonomic.
+    The control module that can handle intense computations such as error approximation, immediate rendering of results and communicating with the sensors and transducers that will be used in the system. The user interface should also be slick and ergonomic.
 \end{enumerate}
 
 \subsection{Justification}
-
-This automation will simplify the discharge collection process and ensure consistency and precision of the results obtained in each step during fluid flow experiments done on the machine. With such automation, one person can also singly complete the experiment with not much strain as opposed to the current state. The automated system will also be modular that it can be easily mounted and dismounted from the main machine with no major adjustments.
+This automation will streamline the discharge collecting process while also ensuring the consistency and quality of the data collected in each phase of the fluid flow tests performed on the system. In contrast to the existing condition, such automation allows a single person to perform the experiment without significant effort. Furthermore, the automated system will also be modular, allowing it to be readily attached and detached from the main machine with few modifications.
