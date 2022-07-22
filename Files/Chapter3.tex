@@ -43,6 +43,7 @@ The motor shaft is required to turn $90^{0}$ in this application since the ball 
 \par
 The load torque that is acting on the motor is given by equation \ref{eq:2}
 \begin{equation}
+\centering
 T=  F * r
 \label{eq:2}
 \end{equation}
@@ -105,7 +106,6 @@ Piezoelectric actuators are transducers that convert electrical energy into a me
 Electromagnetic devices leverage the unique ability of magnetic metals such as iron to generate a magnetic field when electric current is applied. One of the biggest advantages offered by electromagnetic devices is durability. Unlike piezoelectric devices, which have the potential for shattered crystals, or electrostatic solutions with their required precise measurements, electromagnetic offerings can withstand high-volume, high-intensity use without suffering output or capacity loss\cite{yasumoto2018electromagnetic}. This makes them ideal for applications in which on-demand power and magnetism are required. Furthermore, as compared to piezoelectric actuators, electromagnets have a faster response and larger displacements which is actually ideal for our application.
 \subsubsection{Choice}
 JF-0530B DC12V push-pull electromagnet was selected as the main actuation mechanism for the flow diversion sub unit due to its faster response when energized as compared to piezoelectric actuators. Furthermore, as compared to electromagnets, piezoelectric actuators produce very small mechanical linear displacements as compared to electromagnets.
-\clearpage
 \subsubsection{Flow diversion sub-unit designs}
 \begin{figure}[H]
 \includegraphics[width=0.9\linewidth]{Figures/flap.png}
@@ -121,9 +121,6 @@ JF-0530B DC12V push-pull electromagnet was selected as the main actuation mechan
 \label{fig:ssholder}
 \end{figure}
 
-
-\clearpage
-
 \subsection{Discharge Collection Unit}
 It is the core part of the experiment. The discharge collection unit comprises the flow diversion sub-unit, a discharge collection tank, an outlet valve, and weight and temperature measurements sub-units.
 \subsubsection{Discharge collection tank}
@@ -138,14 +135,14 @@ The shape of the tank not only influences how fast the discharge is released int
     \item Rectangular Tanks\\
     Rectangular tanks offer the same storage capacity as to cylindrical tank. However, unlike cylindrical tanks, these tanks may allow for accumulation of discharge which will affect the overall weight.
 \end{enumerate}
-\begin{figure}[ht]
+\begin{figure}[H]
 \includegraphics[width=0.9\linewidth]{Figures/tank.png}
 \centering
 \caption{Discharge Collection Tank }
 \label{fig:tank}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \includegraphics[width=0.9\linewidth]{Figures/Collection tank support.png}
 \centering
 \caption{Collection tank support }
@@ -197,29 +194,29 @@ This sub-unit provides a means of interaction between the system and the user. I
 Based on the above considerations, the following choices were feasible:
 \begin{enumerate}
     \item LCD With keypad \\
-    \begin{figure}
+    \begin{figure}[H]
         \centering
         \includegraphics{Figures/controlInterface.png}
-        \caption{LCD with keypad \cite{lcd_with_keypad}}
+        \caption[LCD with keypad]{LCD with keypad \cite{lcd_with_keypad}}
         \label{fig:lcd_with keypad}
     \end{figure}
     With this setup shown in figure \ref{fig:lcd_with keypad}, one can navigate, read and provide input where it is required on the LCD display using the keypad.
     \item LCD with touch \\
     One can navigate such interface easily by touching or using a virtual keyboard to provide input. This is shown in figure \ref{fig:lcd_with_touch}.
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{Figures/lcdWithTouch.png}
-        \caption{LCD with touch  \cite{lcd_with_touch}}
+        \caption[LCD with touch  ]{LCD with touch  \cite{lcd_with_touch}}
         \label{fig:lcd_with_touch}
     \end{figure}
     \\
      This kind of LCD communicates with the micro-controller through an 8-bit parallel interface. In order to support to touch, this LCD requires at least four ports(32 pins). 
-    \item LCD with Knobs \\
+    \item LCD with Knob \\
     The interface can be controlled by a knob. Navigation from page to page, or from field to field is achieved by turning the knob. This is shown in figure \ref{fig:lcd_with_knobs}.
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{Figures/lcdwithknob.png}
-        \caption{LCD with knob \cite{noauthor_prusa_nodate}}
+        \caption[Lcd with knob]{LCD with knob \cite{noauthor_prusa_nodate}}
         \label{fig:lcd_with_knobs}
     \end{figure}
 \end{enumerate}
@@ -230,14 +227,14 @@ Based on the above considerations, the following choices were feasible:
 \clearpage
 \subsubsection{Interface GUI design}
 The design of the user interface is as shown in figure \ref{fig:GUI_interface}.
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics{Figures/interfacedesign.png}
     \caption{GUI interface}
     \label{fig:GUI_interface}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/Control_flow.png}
     \caption{Application logic}
@@ -251,7 +248,7 @@ As shown in figure \ref{fig:control_flow}, the user from the human interface wil
 
 \subsubsection{Microprocessor Control Unit selection process}
 The choice of a micro-controller for the processing unit was guided by the selected human machine interface, which was an LCD with touch capabilities. Figure \ref{fig:mcu selection} shows the considerations in the Microprocessor Control Unit selection process.
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Figures/mcu selection.png}
     \caption{Microprocessor Control Unit selection process}

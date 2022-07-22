@@ -12,7 +12,7 @@
 \usepackage{Styles/fancyheadings}
 \usepackage{tocloft}
 \usepackage{cite}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 \usepackage[printonlyused]{acronym}
 \usepackage{epstopdf}
 \usepackage{datetime}
@@ -25,12 +25,12 @@
 
 \newdateformat{monthyeardate}{%
 \monthname[\THEMONTH], \THEYEAR}
-\hypersetup{
-    colorlinks=false,
-    linkcolor=black,
-    filecolor=black,      
-    urlcolor=black,
-    }
+% \hypersetup{
+%     colorlinks=false,
+%     linkcolor=black,
+%     filecolor=black,      
+%     urlcolor=black,
+%     }
     
 \usepackage{nomencl}
 \makenomenclature
@@ -127,49 +127,59 @@
 
 \input{Files/Declaration}
 \clearpage
-% \addcontentsline{toc}{section}{Abstract}
-\input{Files/Abstract}
-\clearpage
-% \addcontentsline{toc}{section}{Table of Contents}
 \tableofcontents
 \clearpage
+\addcontentsline{toc}{section}{Table of Contents}
+\lhead{List of Figures}
 \addcontentsline{toc}{section}{List of Figures}
 \let\oldnumberline\numberline%
 \renewcommand{\numberline}{\figurename~\oldnumberline}%
 \listoffigures
 \clearpage
-\addcontentsline{toc}{section}{List of Tables}
+\lhead{List of Tables}
 \renewcommand{\numberline}{\tablename~\oldnumberline}%
 \listoftables
+\newpage
 \clearpage
+\lhead{Nomenclature}
 \addcontentsline{toc}{section}{Nomenclature}
 \input{Files/ListofAbbreviations}
 \clearpage
+\newpage
+
+\newpage
+\lhead{Abstract}
+\input{Files/Abstract}
+\clearpage
 \pagenumbering{arabic}
+  \lhead{Chapter 1. Introduction}
   \input{Files/Chapter1}
   \clearpage
+  \lhead{Chapter 2. Literature Review}
   \input{Files/Chapter2}
   \clearpage
+  \lhead{Chapter 3. Methodology}
     \input{Files/Chapter3}
   \clearpage
+  \lhead{Chapter 4. Results and Discussion}
     \input{Files/Chapter4}
-   \clearpage
+  \clearpage
+   \lhead{Chapter 5. Conclusion}
     \input{Files/Chapter5}
+%  \input{Files/Summary}
   \clearpage
 %----  Bibliography  ----------------------------------------
+\lhead{REFERENCES}
+\markright{References}
 
-\markright{References}  
-\addcontentsline{toc}{section}{References}       
+\addcontentsline{toc}{section}{References}
 \bibliographystyle{Bib/IEEEtran}
-\bibliography{Bib/References.bib}
-
-\nocite{Lun02}
-       
-\clearpage
-\pagestyle{myheadings}
-
-\markright{APPENDIX}                               %
-\addcontentsline{toc}{section}{Appendices}            %            
+\bibliography{Bib/References}
+  \clearpage
+ 
+ \lhead{APPENDICES}
+\markright{APPENDICES}                                
+\addcontentsline{toc}{section}{Appendices}                      
 \input{Files/Appendices}
-
+\appendix
 \end{document}
