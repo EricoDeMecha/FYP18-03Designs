@@ -1,0 +1,63 @@
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Test loop schematic}}{5}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Experimental setup }}{6}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Venturi Meter}}{7}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sampler actuation mechanism}}{10}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Dispensing mechanism}}{10}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Current discharge control unit}}{13}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nema 17 Stepper motor}}{15}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Nema 17 Stepper Motor Drawing}}{16}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Interface}}{17}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Motor Cage}}{18}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ball valve socket}}{19}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Mounting straps}}{20}{}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Stepper Actuated ball valve}}{21}{}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulation results}}{23}{}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces MG996R servo motor}}{25}{}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Servo motor cage}}{27}{}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Servo motor mounting plate}}{28}{}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Servo motor mounted assembly}}{29}{}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Spur gear}}{30}{}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Servo motor with spur gears}}{31}{}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Mounting rods}}{33}{}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Interface}}{34}{}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Top strap}}{35}{}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Bottom strap}}{35}{}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Servo motor discharge flow control assembly}}{36}{}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Servo Assembly simulation results}}{38}{}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Xeryon-XLA Series 3 piezo actuator}}{40}{}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces P16S linear actuator}}{41}{}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Electromagnetic actuator holder}}{42}{}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Diversion flap}}{43}{}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Flap support frame}}{44}{}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Crank}}{45}{}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Coupler}}{46}{}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Rocker}}{47}{}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Flow Diversion assembly}}{48}{}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Diversion assembly FEA results}}{49}{}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Servo Connection}}{50}{}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Electromagnetic Actuator circuit}}{51}{}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces IRF520 Module}}{52}{}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Cuboid discharge container}}{55}{}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Horizontal Cylindrical tank}}{56}{}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Tank simulation results}}{57}{}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Cylindrical tank support frame}}{58}{}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Collection tank}}{59}{}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Butterfly valve}}{60}{}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Solenoid valve}}{61}{}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces Ultrasonic sensor measurement model}}{63}{}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces Strain-type load cells}}{64}{}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces Collection tank with load cells}}{64}{}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces DS18B20 temperature probe}}{65}{}%
+\contentsline {figure}{\numberline {3.46}{\ignorespaces Load cells circuit}}{67}{}%
+\contentsline {figure}{\numberline {3.47}{\ignorespaces LCD with keypad}}{70}{}%
+\contentsline {figure}{\numberline {3.48}{\ignorespaces LCD with touch}}{70}{}%
+\contentsline {figure}{\numberline {3.49}{\ignorespaces Lcd with knob}}{71}{}%
+\contentsline {figure}{\numberline {3.50}{\ignorespaces GUI interface}}{72}{}%
+\contentsline {figure}{\numberline {3.51}{\ignorespaces Board Selection}}{73}{}%
+\contentsline {figure}{\numberline {3.52}{\ignorespaces Load cells circuit}}{75}{}%
+\contentsline {figure}{\numberline {3.53}{\ignorespaces STM32 connected with LCD}}{75}{}%
+\contentsline {figure}{\numberline {3.54}{\ignorespaces Application logic}}{76}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Unit Exploded view}}{79}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Final Assembly}}{81}{}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces P16-S Micro linear actuator dimensions}}{89}{}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces S.H.E.M relevant machine dimensions}}{90}{}%
