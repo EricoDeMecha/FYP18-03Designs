@@ -1,51 +1,70 @@
-\section{Results and Discussion}
+\section{Results}
+This section contains the results obtained during the design of the three units of the project.
+\subsection{Discharge Flow Control Unit}
+\subsubsection{Flow control sub-unit}
+An MG996R servo motor was selected for this sub-unit, to open and close the valve in steps that can be less than $1^{0}$ depending on the number of steps requested by the user. Direct pulse width modulation was preferred to a micro-step drive as a mechanism to drive the servo motor in steps of any size.
 \par
-This section contains the result obtained during the design phase of the project.
-\subsection{Discharge Flow Control Unit Assembly}
+A mounting mechanism for the servo motor was designed to the specs of the motor and stress-tested. It was found to withstand the maximum torque of the motor.   
+\subsubsection{Flow diversion sub-unit}
+A P16-S micro-linear actuator with a linear stroke length of 100mm and stroke-speed of 150mm/s was selected to operate a flap used to divert the discharge flow either into the main reservoir or the discharge collection tank.
+\par 
+ A four-bar kinematic chain was designed and simulated in MechDesigner based on the motion required for the flap. The chain achieved the motion based on the cam data obtained from the simulation.
 \par
-The assembly regulates the discharge flow in precise steps as per the users specifications through the use of a servo motor. Furthermore, to ensure that no sliding of the motor and the motor mounts along the valve, the assembly utilizes the use of serrated straps to enhance grip. The slots in the servo motor holder mount allows for the servo motor to be aligned with the ball valves shaft during setup before the start of the experiment.
-\begin{figure}[ht]
+\subsubsection{Unit Assembly}
+The assembly of the discharge flow control unit is shown in figure \ref{fig:unit_exploded_view}.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{Figures/assembly.png}
-    \caption{Discharge Flow Control Unit and Discharge Collection Unit Assembly}
-    \label{fig:assembly}
+    \includegraphics{Figures/DischargeFlowDiverSionAssembly5.PNG}
+    \caption{Unit Exploded view}
+    \label{fig:unit_exploded_view}
 \end{figure}
-\subsection{Discharge Flow Collection assembly}
+From a motion study simulation in SolidWorks, the assembly appears to be able to regulate the fluid flow in steps as per the users specifications. The diversion unit also seems to be able to divert the flow either to the main reservoir or to the discharge collection tank.
+
+\subsection{Discharge Flow Handling unit}
+\subsubsection{Discharge collection tank sub-unit}
+A horizontal half-cylindrical tank was preferred to a cuboid tank from a simulation that showed that the pressure of the collected fluid will concentrate on a line at the bottom of the tank. This is preferred in this application in order to minimize the time taken to empty the tank.
+\subsubsection{Outlet valve sub-unit}
+A solenoid valve was preferred to a butterfly valve because of its relatively cheaper price though the preferred size is slower.
+\subsubsection{Weight measurement sub-unit}
+Four load cells connected on a Wheatstone bridge were preferred to an ultrasonic approach to measure the weight of the collected discharge because the ultrasonic approach is unreliable.
+\subsubsection{Temperature measurement sub-unit}
+A DS18B20 immersible temperature sensor was selected for this subunit due to its reliability and sensitivity.
 \par
-The sub assembly efficiently and correctly diverts the discharge either to the main collection tank or into the main reservoir through the use of flaps.  This is achieved through the use of an electromagnet. The electromagnet is also correctly positioned to ensure minimal splashes which would otherwise interfere with the electrical components. Furthermore, the fast response of the unit is achieved by the use of an electromagnet whose linear motion is amplified by the use of a lever system hence providing the flap with a wider angle.
-\par
-Additionally, to ensure that only the required amount of water is collected and there are minimal splashes, the sub assembly uses a curved flap. The weight of the collected discharge is also measured by use of correctly positioned load cells which are evenly distributed at the four edges of the collection tank. The weight values from the four load cells are taken after which the average is computed which is taken as the final weight of the discharge. The use of a horizontal cylindrical tank enhances motivated discharge into the main reservoir, in that the discharge fluid is released within a stipulated time through the use of the solenoid valve. 
-\begin{figure}[ht]
+\subsubsection{Final assembly}
+Figure \ref{fig:final assembly} shows the designed system attached to the Synthetic Hydro-Experimental Machine currently in use in JKUAT.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{Figures/final assembly.png}
+    \includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{Figures/final assembly.png}
     \caption{Final Assembly}
     \label{fig:final assembly}
 \end{figure}
-
-\clearpage
+ The dimensions of the part are derived from the existing machine.
+ 
 \subsection{Budget}
-
-\begin{longtable}[!ht]{lllll}
+The table \ref{tab:budget} shows the budget of the project.
+\begin{table}[H]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline
-Item No. & Item & Quantity & Unit cost & Cost \\ \hline
-\endfirsthead
-%
-\multicolumn{5}{c}%
-{{\bfseries Table \thetable\ continued from previous page}} \\
-\endhead
-%
-1 & Servo Motor MG996 & 1 & 800 & 800 \\
-2 & JF-0530B DC12V electromagnet Push-Pull solenoid & 1 & 550 & 550 \\
-3 & 1M/3M DS18b20 temperature probe & 1 & 400 & 400 \\
-4 & LCD Touch (ILI9341 driver) & 1 & 1300 & 1300 \\
-5 & STM32F407VET6 & 1 & 4300 & 4300 \\
-6 & 50Kg Load cells & 4 & 150 & 600 \\
-7 & HX711 Weight amplifier & 1 & 50 & 50 \\
-8 & 3D printing &  &  & 10000 \\
-9 & Miscellaneous & &  & 2000 \\
-Total &  &  &   & 20000\\
-\hline
+\textbf{Item No.} & \textbf{Item} & \textbf{Description} & \textbf{Unit Cost} & \textbf{No.} & \textbf{Total Cost} \\ \hline
+1 & Servo Motor & MG996R(4.8Kg/cm) & 800 & 1 & 800 \\ \hline
+2 & Linear Actuator & P16-S Linear Actuator & 3500 & 1 & 3500 \\ \hline
+3 & Load cells & 50 Kg Load cells & 150 & 4 & 600 \\ \hline
+4 & Load cell Amplifier & HX711 & 100 & 1 & 100 \\ \hline
+5 & Temperature Sensor & DS18B20 Immersible & 300 & 1 & 300 \\ \hline
+6 & Solenoid valve & 3/4''  Plastic & 900 & 1 & 900 \\ \hline
+7 & MCU & STM32F407VET6 & 4400 & 1 & 4400 \\ \hline
+8 & LCD & 320x240 Touch LCD & 1200 & 1 & 1200 \\ \hline
+9 & Power MOSFET & IRF520 N-ch & 550 & 3 & 1650 \\ \hline
+10 & Voltage Regulator & XL4015 DC-DC adjustable buck module & 400 & 3 & 1200 \\ \hline
+11 & Transformer & AC 220V TO DC 12V 5A Transformer Power Supply & 1100 & 1 & 1100 \\ \hline
+12 & Fabrication Cost & 3D printing \& Others & 10000 & 1 & 10000 \\ \hline
+Total &  &  &  &  & \textbf{22600} \\ \hline
+\end{tabular}%
+}
 \caption{Budget}
-\end{longtable}
+\label{tab:budget}
+\end{table}
 
 
