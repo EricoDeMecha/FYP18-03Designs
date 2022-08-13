@@ -18,28 +18,32 @@ In fluid flow experiments utilizing the Venturi and the orifice to establish the
 \subsubsection{Specific objectives}
 
 \begin{enumerate}
-	\item To design an automated discharge flow control unit that can precisely discharge in steps.
-	\item To design and fabricate a discharge collection unit with automated weight, time and temperature measurements.
-    \item To design a user interface and the control algorithm.
+	\item To design an automated discharge flow control unit that can turn the ball valve in steps of less than $1^{0}$ and divert the flow in less than 1 second.
+	\item To design and fabricate a discharge handling unit with automated weight, time and temperature measurements, and a discharge collection tank that can discharge is the least time possible.
+    \item To design a graphical user interface and a robust control algorithm to integrate the units.
 
 \end{enumerate}
 
 \subsubsection{Expected outcomes}
 \begin{enumerate}
-    \item \textbf{Discharge flow control unit}\\
-    A discharge flow control mechanism that can turn the ball valve in precise steps. The steps obtained from the division of the circumference of a full turn by the number of steps should be precise to the nearest whole number.
-    \item \textbf{Discharge Handling unit}\\
-    A discharge collection unit that can precisely collect the discharge within the specified time interval while taking its temperature and weight simultaneously. This can be expected if the expectations of the following sub-units are met :
-    \begin{enumerate}
-        \item \textbf{Flow diversion sub-unit}\\
-        A precisely sized diversion sub-unit, correctly positioned to collect or divert the discharge with minimal splashes the whole stream. This will improve on the accuracy of the weight of the discharge and hence that of the whole experiment experiment in general.
-        \item \textbf{Discharge collection tank}\\
-        A discharge collection tank whose shape can allow for accurate weight measurement. The collection tank should allow for motivated discharge into the reservoir and it should also be positioned in such a way that flow into this tank utilizes gravity to eliminate the need for an extra pump.
-        \item \textbf{Discharge weight and temperature measurements}\\
-        It is expected these units measuring devices can measure to the smallest resolution.
-    \end{enumerate}
-    \item \textbf{Interface and Control Unit}\\
-    The control module that can handle intense computations such as error approximation, immediate rendering of results and communicating with the sensors and transducers that will be used in the system. The user interface should also be slick and ergonomic.
+    \item \textbf{Discharge flow control unit}
+    \begin{itemize}
+        \item \textbf{Flow control subunit}-  A discharge flow control mechanism that can turn steps less than $1^{0}$. This is necessary in a case where an experiment is to be done in more than 90 steps( less than $1^{0}$ per step). 
+        \item \textbf{Diversion subunit} - A mechanism that can divert the flow in less than a second. This is to ensure that only the flow within the time interval is collected.
+    \end{itemize}
+    \item \textbf{Discharge Handling unit}
+    \begin{itemize}
+        \item \textbf{Discharge collection tank}  - A tank that can collect up to $0.02m^{3}$ of the discharge. This is an estimated quantity of the discharge collected when the valve is fully open for approximately 30 seconds.
+        \item \textbf{Discharge Weight measurement} -  A weight measurement device with a gauge factor of more than 2. This is necessary to detect even the smallest change in weight.
+        \item \textbf{Discharge temperature measurement} - An immersible temperature sensor with a resolution of more than 10 bits. This is necessary to detect even the smallest change in the temperature of the discharge.
+        \item \textbf{Outlet valve} - Approximately 1 inch valve in order to empty the empty approximately $0.02m^{3}$ in the least time possible. 
+    \end{itemize}
+    \item \textbf{Interface and Control Unit}
+    \begin{itemize}
+        \item \textbf{Micro-controller} - A microcontroller that can drive a 320x240 touch LCD at approximately 30 frames per second. This is to ensure the displayed data is updated on time while maintaining a slick graphical user interface. 
+        \item \textbf{Application logic} - A robust application logic with auto-calibration capabilities, and event-driven. 
+    \end{itemize}
+
 \end{enumerate}
 
 \subsection{Justification}
