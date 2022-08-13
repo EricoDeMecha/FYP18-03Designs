@@ -4,10 +4,10 @@ This project consists of three main units: a discharge flow control unit, a disc
 \subsection{Discharge flow control unit}
 This unit consist of two main sub-units:
 \begin{enumerate}
-    \item Flow control sub-unit\\
-    This sub-unit controls the dispensing of the flow from the discharge pipe in steps.
-    \item Flow diversion sub-unit\\
-    This sub-unit diverts the flow from the main discharge pipe either to the discharge collection tank or to the main reservoir.
+    \item \textbf{Flow control sub-unit} -
+    This sub-unit controls the dispensing of the discharge from the discharge pipe in steps.
+    \item \textbf{Flow diversion sub-unit} -
+    This sub-unit diverts the discharge from the main discharge pipe either to the discharge collection tank or to the main reservoir.
 \end{enumerate}
 \par
 \subsubsection{Flow control  sub-unit}
@@ -106,7 +106,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
         \label{fig:motor_cage_stepper}
     \end{figure}
     
-    The dimensions of the motor cage in figure \ref{fig:motor_cage_stepper} were determined from that of the stepper motor, the motor-ball valve interface, and that of the ball valve socket shown in figure \ref{fig:ball_valve_socket}.
+    The dimensions of the motor cage in figure \ref{fig:motor_cage_stepper} were determined from that of the stepper motor, the motor-ball valve interface, and that of the existing ball valve socket shown in figure \ref{fig:ball_valve_socket}.
     
     \begin{figure}[H]
         \centering
@@ -138,7 +138,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     
     \item \textbf{Finite element analysis of the assembly}
     \par
-    The assembly was stress tested by applying a torque on the motor cage to determine if it could hold at the maximum torque of the motor. To do this, each part of this assembly will be assigned a material. Polyactic acid (PLA) was selected as the common material for all of the parts in the assembly. This is majorly due to the following reasons:
+    The assembly was stress tested by applying a torque on the motor cage to determine if it could hold at the maximum torque of the motor. To do this, each part of this assembly was be assigned a material. Polyactic acid (PLA) was selected as the common material for all of the parts in the assembly. This is majorly due to the following reasons:
     \begin{itemize}
         \item The maximum weight of the part to be supported by the structure is the stepper motor's weight, 450 grams. This can be supported by a 3D printed plastic support. A lighter material such as fiber glass or carbon fiber could be used but they are costlier than the set project's budget.
         \item The parts are complex for fabrication on the currently existing machinery in the university.
@@ -259,7 +259,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
                   \caption{Servo motor with spur gears}
                   \label{fig:servo_motor_with_spur_gears}
               \end{figure}
-              This design is quite simpler than the first approach. The design considerations are few and can produce even finer translations in the scale of the spur gear pitch($1 mm$). However, the main challenge with this design is the durability of spur gears made of PLA material since servo motors then to have a high starting torque. This will almost necessitate the replacement of the gears after every two or three experiments.  
+              This design is quite simpler than the first approach. The design considerations are few and can produce even finer translations in the scale of the spur gear pitch($1 mm$). However, the main challenge with this design is the durability of spur gears made of PLA material since servo motors tend to have a high starting torque. This will almost necessitate the replacement of the gears after every two or three experiments.  
           \end{itemize}
      \end{enumerate}
      \par
@@ -289,7 +289,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     \par
     \item \textbf{Straps}
     \par
-    Serrated straps shown in \ref{fig:two_rail_serrated_straps} are also an improvement on the straps used in the stepper motor approach. The serration provide more grip on the discharge pipe. It can also support more load. 
+    Serrated straps shown in \ref{fig:two_rail_serrated_straps} are also an improvement on the straps used in the stepper motor approach. The serration provide more grip on the discharge pipe. It can also support more load. The sizing and dimensioning was guided by the existing ball valve casing.
     \begin{figure}[H]
         \centering
         \includegraphics[height=.45\textheight]{Figures/twoRailStrapsTop.PNG}
@@ -429,11 +429,11 @@ In order to hold this actuator in position the following designs were made:
         \label{fig:flap_support_frame}
     \end{figure}
     This frame also provides an extension for supporting the kinematic chain that flexes the flap. 
-    \item \textbf{Kinematic Chain}
+    \item \textbf{Kinematic Link}
     \par
     To amplify the 100mm translation in order to flex the flap enough, a four-bar kinematic mechanism is used. The lengths of the links and the orientation of the four bars are determined by assuming a translation of 100mm at the output.
     \par
-    Using the MechDesigner software, the kinematic chain is designed to provide the required motion for the flap. The CAM data from its simulation are exported automatically to a SolidWorks model of the fixed point of the part.
+    Using the MechDesigner software, the kinematic chain was designed to provide the required motion for the flap. The CAM data from its simulation was exported automatically to a SolidWorks model of the fixed point of the part.
     \begin{enumerate}
         \item \textbf{Crank}
         \par
@@ -586,7 +586,7 @@ This unit consists of the following subunits:
 \begin{itemize}
 \item \textbf{Collection tank}
 \par
-This is used to temporarily collect the discharge from the pipeline during each step of an experiment, after which it is released to the main reservoir through an outlet valve0. The weight and temperature of the discharge are also taken in this tank. 
+This is used to temporarily collect the discharge from the pipeline during each step of an experiment, after which it is released to the main reservoir through an outlet valve. The weight and temperature of the discharge are also taken in this tank. 
 \par
 The following design considerations were made when selecting a tank for this application.
 \begin{enumerate}
