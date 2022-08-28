@@ -33,9 +33,9 @@ The selection and the sizing of the motor for this application was based on the 
     \item The steps size or the number of steps the system can open the valve.
 \end{enumerate}
 \par
-Based on these two considerations, the following two applications were feasible.
+Based on these two considerations, the following two applications were considered.
 \begin{enumerate}
-    \item \textbf{Stepper Motor}\\
+    \item \textbf{Stepper motor application}\\
     This motor operates by accurately synchronizing position with the pulse signal output from the controller to the driver thus achieving highly accurate positioning and speed control. Stepper motors feature high torque and low vibration at low speeds ideally below 1500rpm, ideal for applications requiring quick fixed positioning in a short distance \cite{wargula2017investigations}. Furthermore, stepper motor rotates with a fixed step angle typically 1.8 degrees for a 2-phase. However, to achieve this requires the use of a micro-step driver.
     \par
     Besides having full control of rotation and speed, the simple structure of stepper motors is achieved without using electrical components, such as an encoder within the motor. For this reason, stepper motors are very robust and have high reliability with very few failures. As for stopping accuracy, ±0.05° (without cumulative pitch errors) is very accurate\cite{wargula2017investigations}. Because the positioning of stepper motors is performed by open-loop control, and operated by the magnetized stator and magnetic rotor with small teeth, stepper motors have a higher follow-up mechanism toward commands than the servo motors. Also, no hunting occurs when stopping it.
@@ -51,12 +51,19 @@ Based on these two considerations, the following two applications were feasible.
         \label{fig:Nema17 Steppper motor}
     \end{figure}
     \par
-    Its technical specifications are as shown in the table below:
-    \begin{table}[H]
-\centering
-\begin{tabular}{|l|l|}
+    Its technical specifications are as shown in the table \ref{tab:nema17_specs}:
+
+\begin{longtable}[c]{|l|l|}
 \hline
 \textbf{Property} & \textbf{Value} \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+\textbf{Property} & \textbf{Value} \\ \hline
+\endhead
+%
 Rated Voltage & 12V DC \\ \hline
 Current & 1.2A at 4V \\ \hline
 Step Angle & 1.8 deg \\ \hline
@@ -67,20 +74,13 @@ steps per revolution & 200 \\ \hline
 Operating Temperature & -10 to 40 °C \\ \hline
 Unipolar Holding Torque & 22.2 oz-in \\ \hline
 Maximum torque & 4.8 Kg.cm \\ \hline
-\end{tabular}
+
 \caption[Nema 17 Stepper Motor Technical specification]{Nema 17 Stepper Motor Technical specification \cite{nema17}}
-\end{table}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[height=.48\textheight]{Figures/Nema17StepperMotor.png}
-        \caption{Nema 17 Stepper Motor Drawing}
-        \label{fig:Nema17Drawing}
-    \end{figure}
-    Figure \ref{fig:Nema17Drawing} shows the actual dimensions of a nema 17 stepper motor. 
-    \par
+\label{tab:nema17_specs}
+\end{longtable}
     \item \textbf{Ball valve - motor interface}
     \par
-    An interface is required to connect the motor rotor to the ball valve. There were two option for this application:
+    An interface is required to connect the motor rotor to the ball valve. The following  two design options were considered for this application:
     \begin{itemize}
         \item An interface that could fit the rotor on one end and with claw-like fingers on the other end to turn the existing ball valve's lever.
         \item An interface that could fit the rotor on one end and with the other end, similar to the lever, that could be used in place of the lever.
@@ -101,26 +101,20 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     
     \begin{figure}[H]
         \centering
-        \includegraphics[height=.75\textheight]{Figures/MotorCage.PNG}
+        \includegraphics[height=.55\textheight]{Figures/MotorCage.PNG}
         \caption{Motor Cage}
         \label{fig:motor_cage_stepper}
     \end{figure}
     
-    The dimensions of the motor cage in figure \ref{fig:motor_cage_stepper} were determined from that of the stepper motor, the motor-ball valve interface, and that of the existing ball valve socket shown in figure \ref{fig:ball_valve_socket}.
+    The dimensions of the motor cage in figure \ref{fig:motor_cage_stepper} were determined from that of the stepper motor, the motor-ball valve interface, and that of the existing ball valve socket in order to fit the socket.
     
-    \begin{figure}[H]
-        \centering
-        \includegraphics[height=.8\textheight]{Figures/socket.PNG}
-        \caption{Ball valve socket}
-        \label{fig:ball_valve_socket}
-    \end{figure}
     \item \textbf{Straps}
     \par
     The motor cage with the stepper motor mounted is mounted on the main discharge pipe using straps, one of which is shown in figure \ref{fig:mounting_straps_stepper}.
     
     \begin{figure}[H]
         \centering
-        \includegraphics[height=.6\textheight]{Figures/strap.PNG}
+        \includegraphics[height=.65\textheight]{Figures/strap.PNG}
         \caption{Mounting straps}
         \label{fig:mounting_straps_stepper}
     \end{figure}
@@ -158,7 +152,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     \end{enumerate}
     
     
-    \item \textbf{Servo Motor}\\
+    \item \textbf{Servo motor application}\\
     Servo motors run significantly faster than stepper motors, with speeds greater than 1500 rpm \cite{halicioglu2016mechanisms}. This enables servomotors to be used with gearboxes to deliver much higher torque at useful speeds. They also deliver more consistent torque across the speed range of the motor. Unlike stepper motors, they do not have holding torque. Closed-loop operation enables the controller/drive to command that the load remain at a specific position, however, and the motor will make continual adjustments to hold it there. Thus, servomotors can produce de facto holding torque\cite{halicioglu2016mechanisms}. The Servo motor rotates with a fixed step angle as low as 1 degree with or without the use of a driver. Furthermore, when powered, servomotors tend to move their shaft position to zero, a phenomenon known as hunting.
     \par
     \textbf{Design with servo motor}
@@ -188,7 +182,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     \end{table}
     \begin{figure}[H]
         \centering
-        \includegraphics{Figures/ServoMotorAssembly.PNG}
+        \includegraphics[width=.25\textwidth, height=.25\textheight]{Figures/MG996R.jpg}
         \caption{MG996R servo motor}
         \label{fig:servo_motor_assembly}
     \end{figure}
@@ -208,7 +202,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
             The cage shown in figure \ref{fig:servo_motor_cage} is screwed on to the motor flaps. It just adds additional mounting points for the motor. 
             \begin{figure}[H]
                 \centering
-                \includegraphics[height=.75\textheight]{Figures/ServoMotorHolder.PNG}
+                \includegraphics[height=.7\textheight]{Figures/ServoMotorHolder.PNG}
                 \caption{Servo motor cage}
                 \label{fig:servo_motor_cage}
             \end{figure}
@@ -219,7 +213,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
             \par
             \begin{figure}[H]
                 \centering
-                \includegraphics[height=.75\textheight]{Figures/ServoMotorHolderMount.PNG}
+                \includegraphics[height=.7\textheight]{Figures/ServoMotorHolderMount.PNG}
                 \caption{Servo motor mounting plate}
                 \label{fig:servo_motor_mounting_plate}
             \end{figure}
@@ -229,7 +223,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
             Figure \ref{fig:servo_motor_mounted_assembly} shows the servo motor cage with the servo motor mounted on the mounting plate. The servo motor assembly can be rotated and translated to reposition the line of rotation of the motor axle. 
             \begin{figure}[H]
                 \centering
-                \includegraphics{Figures/ServoMotorMountedAssembly.PNG}
+                \includegraphics[height=.7\textheight]{Figures/ServoMotorMountedAssembly.PNG}
                 \caption{Servo motor mounted assembly}
                 \label{fig:servo_motor_mounted_assembly}
             \end{figure}
@@ -245,7 +239,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
               Spur gear shown in Figure \ref{fig:spur_gear} translates the line of rotation by 5.75mm in any orientation of the servo to a fixed centre line.
               \begin{figure}[H]
                   \centering
-                  \includegraphics{Figures/SpurGear1.PNG}
+                  \includegraphics[height=.55\textheight]{Figures/SpurGear1.PNG}
                   \caption{Spur gear}
                   \label{fig:spur_gear}
               \end{figure}
@@ -255,7 +249,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
               Figure \ref{fig:servo_motor_with_spur_gears} shows the spur gear translation system assembled with the servo motor.
               \begin{figure}[H]
                   \centering
-                  \includegraphics{Figures/ServoMotorWithSpurGears.PNG}
+                  \includegraphics[height=.55\textheight]{Figures/ServoMotorWithSpurGears.PNG}
                   \caption{Servo motor with spur gears}
                   \label{fig:servo_motor_with_spur_gears}
               \end{figure}
@@ -272,7 +266,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
      The protrusion of its surface eliminates the need for another fastener. 
       \begin{figure}[H]
           \centering
-          \includegraphics[height=.75\textheight]{Figures/ServoMotorMountRods.PNG}
+          \includegraphics[height=.55\textheight]{Figures/ServoMotorMountRods.PNG}
           \caption{Mounting rods}
           \label{fig:mounting_rods}
       \end{figure}
@@ -305,7 +299,7 @@ Maximum torque & 4.8 Kg.cm \\ \hline
     The assembly of parts used in the servo motor approach is as shown in Figure \ref{fig:servo_motor_discharge flow control assembly}.
      \begin{figure}[H]
          \centering
-         \includegraphics[height=.75\textheight]{Figures/ServoHolderBallValveAssembly.PNG}
+         \includegraphics[height=.55\textheight]{Figures/ServoHolderBallValveAssembly.PNG}
          \caption{Servo motor discharge flow control assembly}
          \label{fig:servo_motor_discharge flow control assembly}
      \end{figure}
@@ -370,14 +364,14 @@ Based on the above two considerations, the following two design options were fea
     \par
     Electromagnetic actuators work on the principle of electromagnetism. Electrical energy is converted to a linear translational mechanical motion and vice versa. The electric current serves as the actuator quantity in electromagnetic actuators.
     \par
-    Based on the design considerations, a P16-S micro linear actuator shown in figure \ref{fig:p16_s_linear_actuator}  was selected for this application.
+    Based on the design considerations, a LA-T8 micro linear actuator shown in figure \ref{fig:la_t8_linear_actuator}  was selected for this application.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=.25\textwidth, height=.25\textheight]{Figures/P16S.jpg}
-        \caption[P16S linear actuator]{P16S linear actuator \cite{p16_s}}
-        \label{fig:p16_s_linear_actuator}
+        \includegraphics[width=.25\textwidth, height=.25\textheight]{Figures/LA-T8.jpg}
+        \caption[LA-T8 linear actuator]{LA-T8 linear actuator \cite{la_t8}}
+        \label{fig:la_t8_linear_actuator}
     \end{figure}
-    Its technical specifications are shown in table \ref{tab:p16_s}.
+    Its technical specifications are shown in table \ref{tab:la_t8_tab}.
     \begin{table}[H]
     \centering
     \begin{tabular}{|l|l|}
@@ -388,13 +382,13 @@ Based on the above two considerations, the following two design options were fea
     Stroke speed & 150mm/s \\ \hline
     Maximum load & 6.4N \\ \hline
     \end{tabular}
-    \caption[P16-S Micro-linear actuator technical specifications]{P16-S Micro-linear actuator technical specifications \cite{p16_s}}
-    \label{tab:p16_s}
+    \caption[LA-T8 Micro-linear actuator technical specifications]{LA-T8 Micro-linear actuator technical specifications \cite{la_t8}}
+    \label{tab:la_t8_tab}
     \end{table}
     From the technical specifications in the table, it is also evident that this actuator satisfies optimumly the requirements required for this application. Unlike the piezo actuator, this device is available for less than \$ 35 in e-Commerce stores such as Amazon or AliExpress.
 \end{enumerate}
 
-Based on the above descriptions, the P16-S micro-linear actuator was selected for this application mainly because of its availability.
+Based on the above descriptions, the LA-T8 micro-linear actuator was selected for this application mainly because of its availability.
 \par
 In order to hold this actuator in position the following designs were made:
 \begin{enumerate}
@@ -403,7 +397,7 @@ In order to hold this actuator in position the following designs were made:
     This unit supports the actuator on the ball valve. It is required that this unit will withstand the weight of both the actuator and the diverter. It design is as shown in figure \ref{fig:electromagnetic_actuator}.
     \begin{figure}[H]
         \centering
-        \includegraphics[height=.65\textheight]{Figures/ElectromagnetHolder.PNG}
+        \includegraphics[height=.5\textheight]{Figures/ElectromagnetHolder.PNG}
         \caption{Electromagnetic actuator holder}
         \label{fig:electromagnetic_actuator}
     \end{figure}
@@ -414,7 +408,7 @@ In order to hold this actuator in position the following designs were made:
     In order to divert the flow, a channel-like flap is to be used. The design of the flap is as shown in figure \ref{fig:diversion_flap}. 
     \begin{figure}[H]
         \centering
-        \includegraphics{Figures/flap2.PNG}
+        \includegraphics[height=.5\textheight]{Figures/flap2.PNG}
         \caption{Diversion flap}
         \label{fig:diversion_flap}
     \end{figure}
@@ -460,7 +454,7 @@ In order to hold this actuator in position the following designs were made:
         The rocker connects to the coupler on one end and to the flap on the other end. Its design is as shown in figure \ref{fig:rocker}.
         \begin{figure}[H]
             \centering
-            \includegraphics{Figures/KLink2.PNG}
+            \includegraphics[height=.55\textheight]{Figures/KLink2.PNG}
             \caption{Rocker}
             \label{fig:rocker}
         \end{figure}
@@ -476,7 +470,7 @@ In order to hold this actuator in position the following designs were made:
     \end{figure}
     \item \textbf{Finite element analysis of the electromagnetic actuator assembly}
     \par
-    The finite element analysis of the assembly was performed to test how the electromagnetic diversion system is stable under a pressure force of $1N/m^{2}$ applied to the inside of the flap. The results of the simulation are shown in figure \ref{fig:e_simulation_results}.
+    The finite element analysis of the assembly was performed to test how the electromagnetic diversion system is stable under a pressure force of $1N/m^{2}$ applied to the inside of the flap. PLA material was selected for all the parts in the assembly. The results of the simulation are shown in figure \ref{fig:e_simulation_results}.
     \begin{figure}[H]
         \centering
         \includegraphics[height=\textheight, width=\textwidth]{Figures/DischargeFlowDiverSionAssembly-Static 1-1-1.png}
@@ -510,7 +504,7 @@ In order to hold this actuator in position the following designs were made:
     \begin{itemize}
         \item \textbf{Power requirement}
         \par
-        The power requirements for this actuator are 12V DC supply and 2A current as listed in table \ref{tab:p16_s}. These two power requirements cannot be satisfied by just a micro-controller; an external source is necessary.
+        The power requirements for this actuator are 12V DC supply and 2A current as listed in table \ref{tab:la_t8_tab}. These two power requirements cannot be satisfied by just a micro-controller; an external source is necessary.
         \item \textbf{Connection}
         \par
         This two power requirement can be satisfied using a combination of a MOSFET power IRF520 and a D1 flyback diode as shown in Figure \ref{fig:electromagnet_connection}.
@@ -552,7 +546,7 @@ In order to hold this actuator in position the following designs were made:
         \end{align*}
         The angle turned by the motor is proportional to the Logic HIGH duty. Therefore, by writing a time value for $90^{0}$ full turn in the timer register, the turn can be achieved. Smaller turns can be achieved by writing corresponding time values to the timer register.
     \end{itemize}
-    \item \textbf{P16-S electromagnetic Actuator control}
+    \item \textbf{LA-T8 electromagnetic Actuator control}
     \par
     \begin{itemize}
         \item \textbf{Requirements}
@@ -608,7 +602,7 @@ Based on the above considerations, two options were technically feasible in term
     The design of the tank is shown in Figure \ref{fig:cuboid_discharge_container}.
     \begin{figure}[H]
         \centering
-        \includegraphics{Figures/DischargeContainer.PNG}
+        \includegraphics[height=.4\textheight]{Figures/DischargeContainer.PNG}
         \caption{Cuboid discharge container}
         \label{fig:cuboid_discharge_container}
     \end{figure}
@@ -618,14 +612,14 @@ Based on the above considerations, two options were technically feasible in term
     The design of this tank is shown in Figure \ref{fig:horizontal_cylindrical_tank}.
     \begin{figure}[H]
         \centering
-        \includegraphics{Figures/tank2.PNG}
+        \includegraphics[height=.25\textheight]{Figures/tank2.PNG}
         \caption{Horizontal Cylindrical tank}
         \label{fig:horizontal_cylindrical_tank}
     \end{figure}
     When emptying this tank, the tank motivates the flow out of the discharge due to the concentration of the pressure of the discharge on a line at the bottom of the container, as shown by the results of the study simulation in Figure \ref{fig:tank_simulation_results}.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{Figures/tank-Static-1-1-1.png}
+        \includegraphics[width=\textwidth, height=.4\textheight]{Figures/tank-Static-1-1-1.png}
         \caption{Tank simulation results}
         \label{fig:tank_simulation_results}
     \end{figure}
@@ -639,7 +633,7 @@ In order to support the tank in an upright position on a flat surface a support 
 
 \begin{figure}[H]
     \centering
-    \includegraphics{Figures/tankHolder.PNG}
+    \includegraphics[height=.55\textheight]{Figures/tankHolder.PNG}
     \caption{Cylindrical tank support frame}
     \label{fig:cylindrical_tank_support_frame}
 \end{figure}
@@ -652,7 +646,7 @@ The dimensions of the frame were such that it provides a clearance of 1mm for th
 The assembly of the tank and its support frame are as shown in figure \ref{fig:collection_tank}.
 \begin{figure}[H]
     \centering
-    \includegraphics{Figures/CollectionTank.PNG}
+    \includegraphics[height=.45\textheight]{Figures/CollectionTank.PNG}
     \caption{Collection tank}
     \label{fig:collection_tank}
 \end{figure}
@@ -669,7 +663,7 @@ This valve is attached to the collection tank and is used to empty the tank into
     \par
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.25\textwidth, height=.25\textheight]{Figures/butterflyValve.png}
+        \includegraphics[width=0.2\textwidth, height=.2\textheight]{Figures/butterflyValve.png}
         \caption[Butterfly valve]{Butterfly valve \cite{butterfly}}
         \label{fig:butterfly_valve}
     \end{figure}
@@ -678,7 +672,7 @@ This valve is attached to the collection tank and is used to empty the tank into
     \par
     \begin{figure}[H]
         \centering
-        \includegraphics[width=.25\textwidth, height=.25\textheight]{Figures/solenoidValve.jpg}
+        \includegraphics[width=.2\textwidth, height=.2\textheight]{Figures/solenoidValve.jpg}
         \caption[Solenoid valve]{Solenoid valve \cite{solenoid}}
         \label{fig:solenoid_valve}
     \end{figure}
@@ -750,7 +744,7 @@ Since this measurement is taken within roughly 10 seconds before the outlet valv
 A couple of temperature measurement sensors were considered for this application but an immersible DS18B20 temperature probe shown in figure \ref{fig:ds18b20_temperature} was selected. Its technical specifications are shown in table \ref{tab:ds18b20 temperature probe}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.25\textwidth, height=.25\textheight]{Figures/ds18b20_temperature_probe.jpg}
+    \includegraphics[width=.28\textwidth, height=.28\textheight]{Figures/ds18b20_temperature_probe.jpg}
     \caption[DS18B20 temperature probe]{DS18B20 temperature probe \cite{ds18b20}}
     \label{fig:ds18b20_temperature}
 \end{figure}
@@ -791,7 +785,7 @@ Water proof & True \\ \hline
         The load cells are connected in a Wheat-stone bridge through a load combinator module as shown in figure \ref{fig:load_cell_circuit}.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=.65\textwidth, height=.65\textheight]{Figures/load_cell_combined.jpg}
+            \includegraphics[width=.45\textwidth, height=.65\textheight]{Figures/load_cell_combined.jpg}
             \caption[Load cells circuit]{Load cells circuit \cite{loadcell}}
             \label{fig:load_cell_circuit}
         \end{figure}
@@ -875,11 +869,11 @@ Based on the above considerations, the following options were considered:
     A preliminary GUI is shown in Figure \ref{fig:GUI_interface}.
     \begin{figure}[H]
         \centering
-        \includegraphics{Figures/interfacedesign.png}
+        \includegraphics[width=.32\textwidth, height=.24\textheight]{Figures/interfacedesign.png}
         \caption{GUI interface}
         \label{fig:GUI_interface}
     \end{figure}
-    The design is in a 320x240 frame, the size of the selected LCD. The steps sizes and time interval's inputs can be provided by sliding on the sliding bar. The value of a position on the slider is displayed inside the slider handle.
+    The design is in a 320x240 frame, the size of the selected LCD. The steps sizes and time interval's inputs can be provided by sliding on the sliding bar. The value of a position on the slider is displayed on a label beside the sliding bar.
     \par
     The step number, weight and temperature of that specific step are also displayed once a step is complete.
     \par
