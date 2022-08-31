@@ -7,7 +7,4 @@
 *.toc
 *.CW2
 *-STATIC*
-*.BDF
-*.BMC
-*.SL4
-*.MFC
+*.BD2
