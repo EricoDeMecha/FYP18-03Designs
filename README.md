@@ -1,9 +1,9 @@
 ## Design and Fabrication of an Automated Discharge Collection Unit of a Synthetic Hdyro-Experimental Machine
 
-Latex sources
+> :warning: **Massive design files**: The repository has been archived because of its massive size due to the design files!
 
-### Usage
-Run ```renamef``` in the source directory to rename the output file.
-```bash
-    renamef
-``` 
+## About
+
+Design CAD Files hidden under the [design branch](https://github.com/EricoDeMecha/Synthetic-HdyroExperimental-Machine-Project/tree/designs/designs). 
+
+
