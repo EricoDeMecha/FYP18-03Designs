@@ -7,3 +7,5 @@
 Design CAD Files hidden under the [design branch](https://github.com/EricoDeMecha/Synthetic-HdyroExperimental-Machine-Project/tree/designs/designs). 
 
 
+### Design
+![Design](./designs/Figures/DischargeFlowDiverSionAssembly6.PNG)
