@@ -1,6 +1,6 @@
 ## Design and Fabrication of an Automated Discharge Collection Unit of a Synthetic Hdyro-Experimental Machine
 
-> :warning: **Massive design files**: The repository has been archived because of its massive size due to the design files!
+> :warning: **Archived**: The repository has been archived because of its relatively massive size due to the design files!
 
 ## About
 
