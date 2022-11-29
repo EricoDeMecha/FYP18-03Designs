@@ -8,4 +8,4 @@ Design CAD Files hidden under the [design branch](https://github.com/EricoDeMech
 
 
 ### Design
-![Design](./designs/Figures/DischargeFlowDiverSionAssembly6.PNG)
+![Design](https://github.com/EricoDeMecha/FYP18-03Designs/blob/designs/Figures/DischargeFlowDiverSionAssembly6.PNG)
